@@ -124,3 +124,15 @@ body {
     height: 100%;
     object-fit: contain;
 }
+
+@media (max-width: 628px) {
+    .pagina-envelope {
+        width: 95%;
+
+        height: auto;
+    }
+
+    #selo {
+        width: 85px;
+    }
+}
