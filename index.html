@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento - Letícia e Marcelo</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <div class="container-casamento">
+        <div class="pagina-envelope" id="envelope">
+            <div class="convite-interno">
+                <button class="botao-proxima-pagina" id="btn-proxima">Ver detalhes da Recepção ➔</button>
+            </div>
+            
+            <div class="aba-envelope-cima" id="aba-cima"></div>
+            <div class="aba-envelope-baixo" id="aba-baixo"></div>
+            
+            <img src="selo.png" id="selo" alt="Clique para abrir">
+        </div>
+
+        <div class="pagina-detalhes" id="detalhes">
+            <img src="detalhes.png" alt="Detalhes da Recepção">
+        </div>
+    </div>
+
+    <script>
+        const selo = document.getElementById('selo');
+        const abaCima = document.getElementById('aba-cima');
+        const abaBaixo = document.getElementById('aba-baixo');
+        const envelope = document.getElementById('envelope');
+        const detalhes = document.getElementById('detalhes');
+        const btnProxima = document.getElementById('btn-proxima');
+
+        selo.addEventListener('click', () => {
+            abaCima.classList.add('aberto');
+            abaBaixo.classList.add('aberto');
+            
+            selo.style.opacity = '0';
+
+            setTimeout(() => {
+                selo.style.display = 'none';
+                abaCima.style.display = 'none';
+                abaBaixo.style.display = 'none';
+                btnProxima.classList.add('visivel');
+            }, 1000);
+        });
+
+        btnProxima.addEventListener('click', () => {
+            envelope.style.opacity = '0';
+            
+            setTimeout(() => {
+                envelope.style.display = 'none';
+                detalhes.style.display = 'block';
+                window.requestAnimationFrame(() => {
+                    detalhes.style.opacity = '1';
+                });
+            }, 800);
+        });
+
+    </script>
+
+</body>
+</html>
