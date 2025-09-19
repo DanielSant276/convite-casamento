@@ -39,6 +39,10 @@ body {
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
+    outline: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .aba-envelope-cima {
@@ -86,6 +90,10 @@ body {
     cursor: pointer;
     z-index: 11;
     transition: opacity 0.5s;
+    outline: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .botao-proxima-pagina {
