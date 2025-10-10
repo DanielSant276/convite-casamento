@@ -86,7 +86,7 @@ body {
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
+    width: 200px;
     cursor: pointer;
     z-index: 11;
     transition: opacity 0.5s;
@@ -98,24 +98,68 @@ body {
 
 .botao-proxima-pagina {
     position: absolute;
-    bottom: 2%;
+    bottom: 3.5%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: transparent;
-    border: 1px solid #8B4513;
-    color: #8B4513;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
+    background-color: #000000;
     cursor: pointer;
     opacity: 0;
+    /* opacity: 0.5; */
     visibility: hidden;
-    transition: opacity 1s ease-in, visibility 1s ease-in;
     z-index: 5;
+    width: 49%;
+    height: 47px;
 }
 
-.botao-proxima-pagina.visivel {
-    opacity: 1;
+.botao-confirmar-presenca {
+    position: absolute;
+    bottom: 38.5%;
+    left: 45%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    cursor: pointer;
+    opacity: 0;
+    /* opacity: 0.5; */
+    visibility: hidden;
+    z-index: 5;
+    width: 5%;
+    height: 93px;
+    border-radius: 50px;
+}
+
+.botao-lista-presenca {
+    position: absolute;
+    bottom: 38.5%;
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    cursor: pointer;
+    opacity: 0;
+    /* opacity: 0.5; */
+    visibility: hidden;
+    z-index: 5;
+    width: 5%;
+    height: 93px;
+    border-radius: 50px;
+}
+
+.botao-voltar-pagina {
+    position: absolute;
+    bottom: 3%;
+    left: 34.5%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    cursor: pointer;
+    opacity: 0;
+    /* opacity: 0.5; */
+    visibility: hidden;
+    z-index: 5;
+    width: 2.5%;
+    height: 47px;
+    border-radius: 50px;
+}
+
+.visivel {
     visibility: visible;
 }
 
@@ -133,6 +177,205 @@ body {
     object-fit: contain;
 }
 
+
+
+
+
+/* responsivo */
+@media (max-width: 1750px) {
+    .botao-voltar-pagina {
+        left: 35%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .botao-voltar-pagina {
+        left: 34%;
+        height: 42px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .botao-voltar-pagina {
+        left: 33.5%;
+    }
+}
+
+@media (max-width: 1550px) {
+    .botao-voltar-pagina {
+        left: 33%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .botao-voltar-pagina {
+        left: 32%;
+    }
+
+    .botao-confirmar-presenca {
+        left: 44%;
+        width: 6%;
+        height: 85px;
+    }
+
+    .botao-lista-presenca {
+        left: 56%;
+        width: 6%;
+        height: 85px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .botao-voltar-pagina {
+        left: 31%;
+        width: 3.5%;
+    }
+}
+
+@media (max-width: 1320px) {
+    .botao-voltar-pagina {
+        left: 30%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .botao-voltar-pagina {
+        left: 29.5%;
+        height: 40px;
+    }
+
+    .botao-confirmar-presenca {
+        left: 44%;
+    }
+
+    .botao-lista-presenca {
+        left: 56%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .botao-voltar-pagina {
+        left: 29%;
+    }
+
+    .botao-confirmar-presenca {
+        left: 43%;
+        width: 7%;
+    }
+
+    .botao-lista-presenca {
+        left: 57%;
+        width: 7%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .botao-voltar-pagina {
+        left: 28%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .botao-voltar-pagina {
+        left: 27%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .botao-voltar-pagina {
+        left: 25.5%;
+        width: 4.5%;
+    }
+
+    .botao-confirmar-presenca {
+        left: 42%;
+        width: 8%;
+    }
+
+    .botao-lista-presenca {
+        left: 58%;
+        width: 8%;
+    }
+}
+
+@media (max-width: 1030px) {
+    .botao-voltar-pagina {
+        left: 24%;
+    }
+}
+
+@media (max-width: 950px) {
+    .botao-voltar-pagina {
+        left: 22%;
+    }
+}
+
+@media (max-width: 900px) {
+    .botao-voltar-pagina {
+        left: 20.5%;
+    }
+
+    .botao-confirmar-presenca {
+        left: 40%;
+        width: 10%;
+    }
+
+    .botao-lista-presenca {
+        left: 60%;
+        width: 10%;
+    }
+}
+
+@media (max-width: 860px) {
+    .botao-voltar-pagina {
+        left: 19%;
+    }
+}
+
+@media (max-width: 820px) {
+    .botao-voltar-pagina {
+        left: 17%;
+    }
+}
+
+@media (max-width: 770px) {
+    .botao-voltar-pagina {
+        left: 15%;
+        width: 6.5%;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .botao-voltar-pagina {
+        left: 12%;
+    }
+
+    .botao-confirmar-presenca {
+        left: 38%;
+        width: 12%;
+    }
+
+    .botao-lista-presenca {
+        left: 62%;
+        width: 12%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .botao-voltar-pagina {
+        left: 12.5%;
+        width: 6.5%;
+    }
+}
+
+@media (max-width: 670px) {
+    .botao-voltar-pagina {
+        left: 9.5%;
+    }
+}
+
 @media (max-width: 628px) {
     .pagina-envelope {
         width: 100%;
@@ -141,19 +384,20 @@ body {
     }
 
     #selo {
-        width: 85px;
+        width: 150px;
     }
-}
 
-@media (max-width: 530px) {
-    .botao-proxima-pagina {
-        width: 60%;
+    .botao-voltar-pagina {
+        left: 7.5%;
     }
-}
 
-@media (max-width: 451px) {
-    .botao-proxima-pagina {
-        width: 70%;
-        padding: 5px 10px;
+    .botao-confirmar-presenca {
+        left: 36%;
+        width: 13%;
+    }
+
+    .botao-lista-presenca {
+        left: 64%;
+        width: 13%;
     }
 }

@@ -10,7 +10,7 @@
     <div class="container-casamento">
         <div class="pagina-envelope" id="envelope">
             <div class="convite-interno">
-                <button class="botao-proxima-pagina" id="btn-proxima">Ver detalhes da Recepção ➔</button>
+                <button class="botao-proxima-pagina" id="btn-proxima"></button>
             </div>
             
             <div class="aba-envelope-cima" id="aba-cima"></div>
@@ -19,8 +19,12 @@
             <img src="selo.png" id="selo" alt="Clique para abrir">
         </div>
 
-        <div class="pagina-detalhes" id="detalhes">
+        <div class="pagina-detalhes" id="detalhes" style="display:none; opacity:0;">
             <img src="detalhes.png" alt="Detalhes da Recepção">
+
+            <button class="botao-confirmar-presenca" id="btn-confirmar"></button>
+            <button class="botao-lista-presenca" id="btn-lista"></button>
+            <button class="botao-voltar-pagina" id="btn-voltar"></button>
         </div>
     </div>
 
@@ -31,11 +35,13 @@
         const envelope = document.getElementById('envelope');
         const detalhes = document.getElementById('detalhes');
         const btnProxima = document.getElementById('btn-proxima');
+        const btnConfirmar = document.getElementById('btn-confirmar');
+        const btnLista = document.getElementById('btn-lista');
+        const btnVoltar = document.getElementById('btn-voltar');
 
         selo.addEventListener('click', () => {
             abaCima.classList.add('aberto');
             abaBaixo.classList.add('aberto');
-            
             selo.style.opacity = '0';
 
             setTimeout(() => {
@@ -54,10 +60,34 @@
                 detalhes.style.display = 'block';
                 window.requestAnimationFrame(() => {
                     detalhes.style.opacity = '1';
+                    btnConfirmar.classList.add('visivel');
+                    btnLista.classList.add('visivel');
+                    btnVoltar.classList.add('visivel');
                 });
             }, 800);
         });
 
+        btnConfirmar.addEventListener('click', () => {
+            const linkConfirmar = 'https://sites.icasei.com.br/leticiaemarcelo_/pages/36083091';
+            window.open(linkConfirmar, '_blank');
+        });
+
+        btnLista.addEventListener('click', () => {
+            const linkLista = 'https://sites.icasei.com.br/leticiaemarcelo_/pages/36083122';
+            window.open(linkLista, '_blank');
+        });
+
+        btnVoltar.addEventListener('click', () => {
+            detalhes.style.opacity = '0';
+            
+            setTimeout(() => {
+                detalhes.style.display = 'none';
+                envelope.style.display = 'block';
+                window.requestAnimationFrame(() => {
+                    envelope.style.opacity = '1';
+                });
+            }, 800);
+        });
     </script>
 
 </body>
