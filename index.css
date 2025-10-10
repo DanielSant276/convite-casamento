@@ -11,6 +11,14 @@ body {
     overflow: hidden;
 }
 
+button,
+img,
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: transparent;
+  outline: none;
+}
+
 .container-casamento {
     position: relative;
     width: 100%;
@@ -399,5 +407,54 @@ body {
     .botao-lista-presenca {
         left: 64%;
         width: 13%;
+    }
+}
+
+@media (max-width: 628px) {
+    .botao-voltar-pagina {
+        bottom: 4%;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .botao-voltar-pagina {
+        bottom: 6%;
+    }
+}
+
+@media (max-width: 560px) {
+    .botao-voltar-pagina {
+        bottom: 8%;
+    }
+}
+
+@media (max-width: 530px) {
+    .botao-voltar-pagina {
+        bottom: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+    .botao-voltar-pagina {
+        bottom: 12%;
+    }
+}
+
+@media (max-width: 470px) {
+    .botao-voltar-pagina {
+        bottom: 14%;
+    }
+}
+
+@media (max-width: 450px) {
+    .botao-voltar-pagina {
+        bottom: 16%;
+    }
+}
+
+@media (max-width: 415px) {
+    .botao-voltar-pagina {
+        bottom: 18%;
     }
 }
